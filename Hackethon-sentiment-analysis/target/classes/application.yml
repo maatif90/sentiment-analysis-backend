@@ -1,0 +1,39 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info, httptrace
+  server:
+    port: 8443
+    servlet:
+      context-path: /cscentiment
+
+server:
+  servlet:
+    context-path: /cscentiment
+
+spring:
+  jackson:
+    serialization.FAIL_ON_EMPTY_BEANS: false
+    serialization.WRITE_DATES_AS_TIMESTAMPS: true
+    deserialization.FAIL_ON_UNKNOWN_PROPERTIES: false
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+pcln:
+  app:
+    id: cares-hotel-svcs
+  consul:
+    enabled: true
+    address: http://consul.service.nw-dev.consul:8500
+
+documentation:
+  info:
+    title: Cares Hotel Svcs
+    description: APIs from Cares Hotel Svcs
+    contactName: Vinay Mehra
+    contactEmail: vinay.mehra@priceline.com
+
+logging:
+  level:
+    root=DEBUG:
