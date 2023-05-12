@@ -25,6 +25,11 @@
             <groupId>com.priceline.cares</groupId>
             <artifactId>casemanagement</artifactId>
             <version>0.0.401</version>
+                    <exclusions>
+                <exclusion>
+                    <artifactId>servlet-api</artifactId> <groupId>javax.servlet</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
              
         <dependency>
