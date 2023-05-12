@@ -31,9 +31,9 @@ public class CaseCreationController {
         CaseServiceInputDTO caseDTO = new CaseServiceInputDTO();
         caseDTO.setOfferNumber(number);
         caseDTO.setUserName("pclnoperations");
-        caseDTO.setWorkflowId(19000l); //TODO change which issue ID is required. 
-        caseDTO.setIssueId(251490l);
-        caseDTO.setTaskId(28002l);
+        caseDTO.setWorkflowId(11044l); //TODO change which issue ID is required. 
+        caseDTO.setIssueId(176974l);
+        caseDTO.setTaskId(15246l);
 
 
         ArrayList<EventLog> events = new ArrayList<EventLog>();
