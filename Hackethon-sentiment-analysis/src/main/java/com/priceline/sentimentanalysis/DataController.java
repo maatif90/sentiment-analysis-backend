@@ -28,7 +28,7 @@ public class DataController {
 
         String responseBody = null;
         String apiKey = "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";
-        String questionAppend="give me a sentiment and appropriate response in follow json format. if sentiment is negative please add this toll free number n response 140073938 and ask customer for offer number. \n" +
+        String questionAppend="give me a sentiment and appropriate response in follow json format. if sentiment is negative please add this toll free number n response 140073938 and ask customer for trip number. \n" +
                 "{\n" +
                 "isnegative : boolean,\n" +
                 "response : text,\n" +
