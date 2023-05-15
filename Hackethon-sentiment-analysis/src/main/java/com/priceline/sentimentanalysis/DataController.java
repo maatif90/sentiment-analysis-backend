@@ -11,8 +11,7 @@ import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,15 +22,16 @@ import java.util.List;
 @RestController
 public class DataController {
 
-    @PostMapping("processQuery" )
+    @CrossOrigin
+    @PostMapping("/processQuery")
     public String sendResponse(@RequestBody ReviewBody reviewBody) {
 
         String responseBody = null;
-        String apiKey = "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";
-        String questionAppend="give me a sentiment and appropriate response in follow json format. if sentiment is negative please add this toll free number n response 140073938 and ask customer for trip number. \n" +
+        String apiKey = "ENTER CHAT GPT ACCOUNT API KEY";
+        String questionAppend="give me a sentiment and appropriate human like response in follow json format. if sentiment is negative please add this toll free number n response 140073938 and ask customer for trip number. \n" +
                 "{\n" +
                 "isnegative : boolean,\n" +
-                "response : text,\n" +
+                "response : text\n" +
                 "}";
 
         try (CloseableHttpClient httpClient = HttpClients.createDefault()) {
